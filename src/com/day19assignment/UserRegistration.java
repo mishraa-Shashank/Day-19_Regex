@@ -52,8 +52,8 @@ public class UserRegistration {
         else
             System.out.println("Invalid mobile number");
 
-        // UseCase-7 Valid password one char should be capital and contain at least one numeric char
-        String passwordRegex = "^(?=.*\\d)(?=.*[a-zA-Z]){8,}$";
+        // UseCase-8 Valid password one char should be capital, contain at least one numeric char and one special char
+        String passwordRegex = "^(?=.*\\d)(?=.*[a-zA-Z])(?=.*[A-Z])(?=.*[-#$%&@]+)(?=.*[a-zA-Z]).{8,}$";
         System.out.println("Enter password:");
         String password = new Scanner(System.in).next();
         isMatched = validate(passwordRegex,password);
