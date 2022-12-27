@@ -21,5 +21,15 @@ public class UserRegistration {
             System.out.println("Valid first name");
         else
             System.out.println("Invalid first name");
+
+        // UseCase-2 Valid last name
+        String lastNameRegex = "^[A-Z]{1}[a-z]{3,}$";
+        System.out.println("Enter your last name:");
+        String lastName = new Scanner(System.in).next();
+        isMatched = validate(lastNameRegex, lastName);
+        if (isMatched)
+            System.out.println("Valid last name");
+        else
+            System.out.println("Invalid last name");
     }
 }
