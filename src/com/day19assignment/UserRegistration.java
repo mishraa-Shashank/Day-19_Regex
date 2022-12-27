@@ -31,5 +31,15 @@ public class UserRegistration {
             System.out.println("Valid last name");
         else
             System.out.println("Invalid last name");
+
+        // UseCase-3 Valid email-ID
+        String emailIDRegex = "^[a-zA-Z0-9]{3,}[.]?[a-zA-Z0-9]+[@][a-zA-Z]+[.][a-z]{3,}([_+-.][a-zA-Z])*$";
+        System.out.println("Enter your email-ID:");
+        String emailID = new Scanner(System.in).next();
+        isMatched = validate(emailIDRegex, emailID);
+        if (isMatched)
+            System.out.println("Valid email-ID");
+        else
+            System.out.println("Invalid email-ID");
     }
 }
