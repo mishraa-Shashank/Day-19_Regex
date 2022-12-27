@@ -52,11 +52,11 @@ public class UserRegistration {
         else
             System.out.println("Invalid mobile number");
 
-        // UseCase-6 Valid password one char should be capital
-        String passwordRegex = "^(?=.*[A-Z]){1}(?=.*[a-zA-Z0-9]){8,}$";
+        // UseCase-7 Valid password one char should be capital and contain at least one numeric char
+        String passwordRegex = "^(?=.*\\d)(?=.*[a-zA-Z]){8,}$";
         System.out.println("Enter password:");
         String password = new Scanner(System.in).next();
-        isMatched = validate(passwordRegex, password);
+        isMatched = validate(passwordRegex,password);
         if (isMatched)
             System.out.println("Valid password.");
         else
