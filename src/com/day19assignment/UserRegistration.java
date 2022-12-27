@@ -51,5 +51,15 @@ public class UserRegistration {
             System.out.println("Valid mobile number.");
         else
             System.out.println("Invalid mobile number");
+
+        // UseCase-5 Valid password one char should be capital
+        String passwordRegex = "^[a-zA-Z0-9]{8}$";
+        System.out.println("Enter password:");
+        String password = new Scanner(System.in).next();
+        isMatched = validate(passwordRegex, password);
+        if (isMatched)
+            System.out.println("Valid password.");
+        else
+            System.out.println("Invalid password.");
     }
 }
