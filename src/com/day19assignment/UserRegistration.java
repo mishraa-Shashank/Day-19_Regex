@@ -41,5 +41,15 @@ public class UserRegistration {
             System.out.println("Valid email-ID");
         else
             System.out.println("Invalid email-ID");
+
+        // UseCase-4 Valid mobile number
+        String mobileNumberRegex = "^[+91|0]+[ ]?[6-9]{1}[0-9]{9}$";
+        System.out.println("Enter your mobile number:");
+        String mobileNumber = new Scanner(System.in).nextLine();
+        isMatched = validate(mobileNumberRegex, mobileNumber);
+        if (isMatched)
+            System.out.println("Valid mobile number.");
+        else
+            System.out.println("Invalid mobile number");
     }
 }
